@@ -844,5 +844,25 @@ sp('basic','s-pl2',document.querySelector('#s-pcat .pcbtn'),'s-pcat');
 sp('basic','b-pl2',document.querySelector('#b-pcat .pcbtn'),'b-pcat');
 initCL();
 </script>
+
+<!-- NAVER MAP POPUP -->
+<div id="nmap-overlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:300;align-items:flex-end;justify-content:center;padding-bottom:env(safe-area-inset-bottom)" onclick="if(event.target===this)closeNmap()">
+  <div style="background:#fff;border-radius:20px 20px 0 0;padding:24px 20px 32px;width:100%;max-width:390px">
+    <div style="width:36px;height:4px;background:#e0ddd8;border-radius:2px;margin:0 auto 20px"></div>
+    <div style="font-size:11px;color:#999;margin-bottom:6px;text-align:center">導航至</div>
+    <div id="nmap-title" style="font-size:16px;font-weight:500;color:#222;text-align:center;margin-bottom:20px"></div>
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <a id="nmap-app-btn" href="#" style="display:flex;align-items:center;justify-content:center;gap:10px;padding:14px;background:#03C75A;border-radius:12px;text-decoration:none" onclick="closeNmap()">
+        <span style="font-size:20px">🗺️</span>
+        <span style="color:white;font-size:14px;font-weight:500;font-family:'Noto Sans TC',sans-serif">開啟 Naver Map App</span>
+      </a>
+      <a id="nmap-web-btn" href="#" target="_blank" style="display:flex;align-items:center;justify-content:center;gap:10px;padding:14px;background:#f5f3ef;border-radius:12px;text-decoration:none" onclick="closeNmap()">
+        <span style="font-size:20px">🌐</span>
+        <span style="color:#222;font-size:14px;font-weight:500;font-family:'Noto Sans TC',sans-serif">用瀏覽器開啟地圖</span>
+      </a>
+      <button onclick="closeNmap()" style="padding:12px;background:none;border:none;font-size:14px;color:#999;cursor:pointer;font-family:'Noto Sans TC',sans-serif">取消</button>
+    </div>
+  </div>
+</div>
 </body>
 </html>

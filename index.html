@@ -168,6 +168,17 @@ body{background:#f0ede8;display:flex;justify-content:center;padding:12px;min-hei
 .cl-box.ck{background:#2d1b4e;border-color:#2d1b4e;color:#fff}
 .cl-lbl{font-size:13px;color:#222;flex:1}
 .cl-lbl.done{color:#bbb;text-decoration:line-through}
+
+.nav-map-btn {
+  display: inline-flex; align-items: center; gap: 4px;
+  margin-top: 6px; padding: 4px 10px;
+  border-radius: 20px; border: none;
+  font-size: 11px; cursor: pointer;
+  font-family: 'Noto Sans TC', sans-serif;
+  color: white; background: #03C75A;
+}
+.nav-map-btn:active { opacity: 0.8; }
+
 </style>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -183,6 +194,17 @@ body{background:#f0ede8;display:flex;justify-content:center;padding:12px;min-hei
     padding-left: env(safe-area-inset-left);
     padding-right: env(safe-area-inset-right);
   }
+
+.nav-map-btn {
+  display: inline-flex; align-items: center; gap: 4px;
+  margin-top: 6px; padding: 4px 10px;
+  border-radius: 20px; border: none;
+  font-size: 11px; cursor: pointer;
+  font-family: 'Noto Sans TC', sans-serif;
+  color: white; background: #03C75A;
+}
+.nav-map-btn:active { opacity: 0.8; }
+
 </style>
 </head>
 <body>
@@ -230,34 +252,50 @@ body{background:#f0ede8;display:flex;justify-content:center;padding:12px;min-hei
   </div>
   <div class="dc on" id="s-d1"><div class="tl">
     <div class="ti s"><div class="ttime">03:30</div><div class="ec"><div class="et">高雄小港機場出發</div><div class="em">提早 2 小時到機場辦理登機手續</div><span class="tag tt">航班</span></div></div>
-    <div class="ti s"><div class="ttime">07:45</div><div class="ec"><div class="et">抵達首爾仁川機場</div><div class="em">入境手續約需 1~1.5 小時，準備好護照</div><span class="tag tt">抵達</span></div></div>
+    <div class="ti s"><div class="ttime">07:45</div><div class="ec"><div class="et">抵達首爾仁川機場</div>
+<button class="nav-map-btn" onclick="nmap('인천국제공항',37.4602,126.4407)">📍 Naver 導航</button><div class="em">入境手續約需 1~1.5 小時，準備好護照</div><span class="tag tt">抵達</span></div></div>
     <div class="ti s"><div class="ttime">09:00</div><div class="ec"><div class="et">入境手續完成</div><div class="em">換現金、購買 T-money 或 USIM 卡</div><span class="tag tt">準備</span></div></div>
-    <div class="ti s"><div class="ttime">10:20</div><div class="ec"><div class="et">抵達雙門站 入住</div><div class="em">超商 GS25 / 7-11 採買零食宵夜，放鬆休息</div><span class="tag tstay">住宿</span><span class="tag tf">超商</span></div></div>
+    <div class="ti s"><div class="ttime">10:20</div><div class="ec"><div class="et">抵達雙門站 入住</div>
+<button class="nav-map-btn" onclick="nmap('쌍문역',37.649,127.0325)">📍 Naver 導航</button><div class="em">超商 GS25 / 7-11 採買零食宵夜，放鬆休息</div><span class="tag tstay">住宿</span><span class="tag tf">超商</span></div></div>
   </div></div>
   <div class="dc" id="s-d2"><div class="tip" style="background:#EEEDFE;color:#534AB7">🛍 今天：市場 + 東大門 + 明洞</div><div class="tl">
     <div class="ti s"><div class="ttime">08:30</div><div class="ec"><div class="et">雙門站出發</div><span class="tag tt">出發</span></div></div>
-    <div class="ti s"><div class="ttime">09:00</div><div class="ec"><div class="et">鐘路五街站 → 廣藏市場</div><div class="em">品嚐綠豆粉煎餅、麻藥紫菜包飯</div><span class="tag tf">市場小吃</span></div></div>
-    <div class="ti s"><div class="ttime">午餐</div><div class="ec"><div class="et">孔陵一隻雞</div><div class="em">整隻雞燉湯，份量超大！</div><span class="tag tf">午餐</span></div></div>
-    <div class="ti s"><div class="ttime">13:00</div><div class="ec"><div class="et">東大門歷史文化公園站 14號出口</div><div class="em">東大門逛街、晴裝批發</div><span class="tag tsh">購物</span></div></div>
-    <div class="ti s"><div class="ttime">18:00</div><div class="ec"><div class="et">明洞站 6號出口 → 明洞商圈</div><div class="em">保養品掃貨、街頭小吃</div><span class="tag tsh">購物</span><span class="tag tf">小吃</span></div></div>
+    <div class="ti s"><div class="ttime">09:00</div><div class="ec"><div class="et">鐘路五街站 → 廣藏市場</div>
+<button class="nav-map-btn" onclick="nmap('광장시장',37.57,126.9994)">📍 Naver 導航</button><div class="em">品嚐綠豆粉煎餅、麻藥紫菜包飯</div><span class="tag tf">市場小吃</span></div></div>
+    <div class="ti s"><div class="ttime">午餐</div><div class="ec"><div class="et">孔陵一隻雞</div>
+<button class="nav-map-btn" onclick="nmap('공릉 닭한마리',37.5699,127.0012)">📍 Naver 導航</button><div class="em">整隻雞燉湯，份量超大！</div><span class="tag tf">午餐</span></div></div>
+    <div class="ti s"><div class="ttime">13:00</div><div class="ec"><div class="et">東大門歷史文化公園站 14號出口</div>
+<button class="nav-map-btn" onclick="nmap('동대문디자인플라자',37.5665,127.0093)">📍 Naver 導航</button><div class="em">東大門逛街、晴裝批發</div><span class="tag tsh">購物</span></div></div>
+    <div class="ti s"><div class="ttime">18:00</div><div class="ec"><div class="et">明洞站 6號出口 → 明洞商圈</div>
+<button class="nav-map-btn" onclick="nmap('명동',37.5636,126.9869)">📍 Naver 導航</button><div class="em">保養品掃貨、街頭小吃</div><span class="tag tsh">購物</span><span class="tag tf">小吃</span></div></div>
   </div></div>
   <div class="dc" id="s-d3"><div class="tip" style="background:#E1F5EE;color:#0F6E56">✨ 今天：聖水洞潮流 + 化妝體驗 + 烤肉</div><div class="tl">
     <div class="ti s"><div class="ttime">08:20</div><div class="ec"><div class="et">雙門站出發</div><span class="tag tt">出發</span></div></div>
-    <div class="ti s"><div class="ttime">09:00</div><div class="ec"><div class="et">聖水洞 3號出口</div><div class="em">首爾最潮街區，咖啡廳、選物店</div><span class="tag ts">景點</span></div></div>
-    <div class="ti s"><div class="ttime">10:30</div><div class="ec"><div class="et">無垢屋 預約北韓雞湯</div><div class="em">道地北韓式料理，記得事先預約！</div><span class="tag tf">午餐</span></div></div>
-    <div class="ti s"><div class="ttime">11:00</div><div class="ec"><div class="et">化妝體驗</div><div class="em">韓式妝容體驗／男生組可至 T1 大樓參觀</div><span class="tag tfun">體驗</span></div></div>
-    <div class="ti s"><div class="ttime">19:00</div><div class="ec"><div class="et">肉夢晚餐 — 韓式烤肉</div><div class="em">豪華烤肉！</div><span class="tag tf">晚餐</span></div></div>
+    <div class="ti s"><div class="ttime">09:00</div><div class="ec"><div class="et">聖水洞 3號出口</div>
+<button class="nav-map-btn" onclick="nmap('성수동',37.5446,127.056)">📍 Naver 導航</button><div class="em">首爾最潮街區，咖啡廳、選物店</div><span class="tag ts">景點</span></div></div>
+    <div class="ti s"><div class="ttime">10:30</div><div class="ec"><div class="et">無垢屋 預約北韓雞湯</div>
+<button class="nav-map-btn" onclick="nmap('무구옥',37.5444,127.0557)">📍 Naver 導航</button><div class="em">道地北韓式料理，記得事先預約！</div><span class="tag tf">午餐</span></div></div>
+    <div class="ti s"><div class="ttime">11:00</div><div class="ec"><div class="et">化妝體驗</div>
+<button class="nav-map-btn" onclick="nmap('성수동 메이크업',37.5446,127.056)">📍 Naver 導航</button><div class="em">韓式妝容體驗／男生組可至 T1 大樓參觀</div><span class="tag tfun">體驗</span></div></div>
+    <div class="ti s"><div class="ttime">19:00</div><div class="ec"><div class="et">肉夢晚餐 — 韓式烤肉</div>
+<button class="nav-map-btn" onclick="nmap('성수동 고기집',37.544,127.0558)">📍 Naver 導航</button><div class="em">豪華烤肉！</div><span class="tag tf">晚餐</span></div></div>
   </div></div>
   <div class="dc" id="s-d4"><div class="tip" style="background:#FAEEDA;color:#854F0B">👘 今天：景福宮韓服 + 多點探索</div><div class="tl">
     <div class="ti s"><div class="ttime">07:10</div><div class="ec"><div class="et">雙門站出發</div><span class="tag tt">出發</span></div></div>
-    <div class="ti s"><div class="ttime">08:00</div><div class="ec"><div class="et">景福宮 3號出口 → 早餐紫菜包飯</div><span class="tag tf">早餐</span></div></div>
-    <div class="ti s"><div class="ttime">09:00</div><div class="ec"><div class="et">挑選韓服</div><div class="em">熱門款式搶手，建議提早選</div><span class="tag tfun">體驗</span></div></div>
-    <div class="ti s"><div class="ttime">14:00</div><div class="ec"><div class="et">景福宮 + 北村韓屋村 穿韓服拍照</div><div class="em">拍完後前往永和樓吃炸醬麵</div><span class="tag ts">景點</span><span class="tag tf">午餐</span></div></div>
-    <div class="ti s"><div class="ttime">14:00+</div><div class="ec"><div class="et">馬場洞 → 望遠市場 → 弘大商圈</div><span class="tag tsh">購物</span><span class="tag tf">市場</span></div></div>
-    <div class="ti s"><div class="ttime">晚上</div><div class="ec"><div class="et">惠化樂天超市採買</div><div class="em">零食、泡麵、化妝品衝刺採購</div><span class="tag tsh">採買</span></div></div>
+    <div class="ti s"><div class="ttime">08:00</div><div class="ec"><div class="et">景福宮 3號出口 → 早餐紫菜包飯</div>
+<button class="nav-map-btn" onclick="nmap('경복궁',37.5796,126.977)">📍 Naver 導航</button><span class="tag tf">早餐</span></div></div>
+    <div class="ti s"><div class="ttime">09:00</div><div class="ec"><div class="et">挑選韓服</div>
+<button class="nav-map-btn" onclick="nmap('경복궁 한복',37.5796,126.977)">📍 Naver 導航</button><div class="em">熱門款式搶手，建議提早選</div><span class="tag tfun">體驗</span></div></div>
+    <div class="ti s"><div class="ttime">14:00</div><div class="ec"><div class="et">景福宮 + 北村韓屋村 穿韓服拍照</div>
+<button class="nav-map-btn" onclick="nmap('북촌한옥마을',37.5826,126.983)">📍 Naver 導航</button><div class="em">拍完後前往永和樓吃炸醬麵</div><span class="tag ts">景點</span><span class="tag tf">午餐</span></div></div>
+    <div class="ti s"><div class="ttime">14:00+</div><div class="ec"><div class="et">馬場洞 → 望遠市場 → 弘大商圈</div>
+<button class="nav-map-btn" onclick="nmap('홍대입구',37.5571,126.9245)">📍 Naver 導航</button><span class="tag tsh">購物</span><span class="tag tf">市場</span></div></div>
+    <div class="ti s"><div class="ttime">晚上</div><div class="ec"><div class="et">惠化樂天超市採買</div>
+<button class="nav-map-btn" onclick="nmap('혜화 롯데슈퍼',37.5824,127.0021)">📍 Naver 導航</button><div class="em">零食、泡麵、化妝品衝刺採購</div><span class="tag tsh">採買</span></div></div>
   </div></div>
   <div class="dc" id="s-d5"><div class="tip" style="background:#FCEBEB;color:#993556">🎢 今天全天：首爾樂天世界！</div><div class="tl">
-    <div class="ti s"><div class="ttime">全天</div><div class="ec"><div class="et">樂天世界樂園 Lotte World</div><div class="em">室內+室外雙區，必玩：旋轉木馬、雲霄飛車、4D劇場、遊行秀</div><span class="tag tfun">樂園</span></div></div>
+    <div class="ti s"><div class="ttime">全天</div><div class="ec"><div class="et">樂天世界樂園 Lotte World</div>
+<button class="nav-map-btn" onclick="nmap('롯데월드',37.5113,127.0982)">📍 Naver 導航</button><div class="em">室內+室外雙區，必玩：旋轉木馬、雲霄飛車、4D劇場、遊行秀</div><span class="tag tfun">樂園</span></div></div>
     <div class="ti s"><div class="ttime">備註</div><div class="ec"><div class="et">實用資訊</div><div class="em">地鐵2號線蠶室站 4號出口 ／ 建議網路提前購票 ／ 可帶零食入場</div><span class="tag tt">交通</span></div></div>
   </div></div>
 </div>
@@ -410,37 +448,57 @@ body{background:#f0ede8;display:flex;justify-content:center;padding:12px;min-hei
     <button class="dtab" onclick="switchDay('b',4,this)">Day 4</button>
   </div>
   <div class="dc on" id="b-d1"><div class="tl">
-    <div class="ti b"><div class="ttime">11:30</div><div class="ec"><div class="et">抵達釜山站</div><div class="em">KTX 抵達，搭地鐵1號線出發</div><span class="tag tt">交通</span></div></div>
-    <div class="ti b"><div class="ttime">午間</div><div class="ec"><div class="et">南浦站周邊</div><div class="em">市場糖餅씨앗호떡、札嘎其海鮮市場</div><span class="tag tf">小吃</span><span class="tag ts">市場</span></div></div>
-    <div class="ti b"><div class="ttime">下午</div><div class="ec"><div class="et">甘川洞文化村</div><div class="em">穿韓服拍彩色小屋，打卡藝術壁畫</div><span class="tag ts">景點</span></div></div>
-    <div class="ti b"><div class="ttime">傍晚</div><div class="ec"><div class="et">松島海上纜車</div><div class="em">俯瞰松島海灣，可選透明地板車廂</div><span class="tag tfun">體驗</span></div></div>
-    <div class="ti b"><div class="ttime">日落</div><div class="ec"><div class="et">廣安里 Airbnb 入住</div><div class="em">海景陽台看夕陽，放鬆休息</div><span class="tag tstay">住宿</span></div></div>
-    <div class="ti b"><div class="ttime">晚上</div><div class="ec"><div class="et">西面站逛街 + 烤肉晚餐</div><div class="em">購物商圈 + 삼겹살 配燒酒</div><span class="tag tsh">購物</span><span class="tag tf">晚餐</span></div></div>
+    <div class="ti b"><div class="ttime">11:30</div><div class="ec"><div class="et">抵達釜山站</div>
+<button class="nav-map-btn" onclick="nmap('부산역',35.1145,129.042)">📍 Naver 導航</button><div class="em">KTX 抵達，搭地鐵1號線出發</div><span class="tag tt">交通</span></div></div>
+    <div class="ti b"><div class="ttime">午間</div><div class="ec"><div class="et">南浦站周邊</div>
+<button class="nav-map-btn" onclick="nmap('자갈치시장',35.0973,129.0299)">📍 Naver 導航</button><div class="em">市場糖餅씨앗호떡、札嘎其海鮮市場</div><span class="tag tf">小吃</span><span class="tag ts">市場</span></div></div>
+    <div class="ti b"><div class="ttime">下午</div><div class="ec"><div class="et">甘川洞文化村</div>
+<button class="nav-map-btn" onclick="nmap('감천문화마을',35.0966,129.0104)">📍 Naver 導航</button><div class="em">穿韓服拍彩色小屋，打卡藝術壁畫</div><span class="tag ts">景點</span></div></div>
+    <div class="ti b"><div class="ttime">傍晚</div><div class="ec"><div class="et">松島海上纜車</div>
+<button class="nav-map-btn" onclick="nmap('송도해상케이블카',35.076,129.0166)">📍 Naver 導航</button><div class="em">俯瞰松島海灣，可選透明地板車廂</div><span class="tag tfun">體驗</span></div></div>
+    <div class="ti b"><div class="ttime">日落</div><div class="ec"><div class="et">廣安里 Airbnb 入住</div>
+<button class="nav-map-btn" onclick="nmap('광안리해수욕장',35.1531,129.1186)">📍 Naver 導航</button><div class="em">海景陽台看夕陽，放鬆休息</div><span class="tag tstay">住宿</span></div></div>
+    <div class="ti b"><div class="ttime">晚上</div><div class="ec"><div class="et">西面站逛街 + 烤肉晚餐</div>
+<button class="nav-map-btn" onclick="nmap('서면',35.1579,129.0597)">📍 Naver 導航</button><div class="em">購物商圈 + 삼겹살 配燒酒</div><span class="tag tsh">購物</span><span class="tag tf">晚餐</span></div></div>
   </div></div>
   <div class="dc" id="b-d2"><div class="tl">
     <div class="ti b"><div class="ttime">09:00</div><div class="ec"><div class="et">附近麵包店早午餐 + 退房</div><span class="tag tf">早午餐</span></div></div>
-    <div class="ti b"><div class="ttime">前往</div><div class="ec"><div class="et">搭車到海雲台寄放行李</div><span class="tag tt">交通</span></div></div>
+    <div class="ti b"><div class="ttime">前往</div><div class="ec"><div class="et">搭車到海雲台寄放行李</div>
+<button class="nav-map-btn" onclick="nmap('해운대역',35.1631,129.1637)">📍 Naver 導航</button><span class="tag tt">交通</span></div></div>
     <div class="ti b"><div class="ttime">上午</div><div class="ec"><div class="et">散步：櫻花路 or 海邊沙灘路</div><span class="tag ts">散步</span></div></div>
-    <div class="ti b"><div class="ttime">中途</div><div class="ec"><div class="et">海濱列車 → 尾浦站</div><div class="em">灌籃高手同款平交道打卡！</div><span class="tag tfun">體驗</span></div></div>
-    <div class="ti b"><div class="ttime">青沙浦</div><div class="ec"><div class="et">青沙浦站 → 人氣麵包外帶</div><span class="tag tf">麵包</span></div></div>
-    <div class="ti b"><div class="ttime">下午</div><div class="ec"><div class="et">海濱列車 → 松亭 → Skyline 滑板車</div><span class="tag tfun">體驗</span></div></div>
-    <div class="ti b"><div class="ttime">傍晚</div><div class="ec"><div class="et">地鐵回 Spa Land（6 小時）</div><span class="tag tfun">汗蒸幕</span></div></div>
+    <div class="ti b"><div class="ttime">中途</div><div class="ec"><div class="et">海濱列車 → 尾浦站</div>
+<button class="nav-map-btn" onclick="nmap('미포역 블루라인파크',35.1589,129.1794)">📍 Naver 導航</button><div class="em">灌籃高手同款平交道打卡！</div><span class="tag tfun">體驗</span></div></div>
+    <div class="ti b"><div class="ttime">青沙浦</div><div class="ec"><div class="et">青沙浦站 → 人氣麵包外帶</div>
+<button class="nav-map-btn" onclick="nmap('청사포역',35.1693,129.1957)">📍 Naver 導航</button><span class="tag tf">麵包</span></div></div>
+    <div class="ti b"><div class="ttime">下午</div><div class="ec"><div class="et">海濱列車 → 松亭 → Skyline 滑板車</div>
+<button class="nav-map-btn" onclick="nmap('송정 스카이라인',35.1793,129.2072)">📍 Naver 導航</button><span class="tag tfun">體驗</span></div></div>
+    <div class="ti b"><div class="ttime">傍晚</div><div class="ec"><div class="et">地鐵回 Spa Land（6 小時）</div>
+<button class="nav-map-btn" onclick="nmap('스파랜드 센텀시티',35.1693,129.1317)">📍 Naver 導航</button><span class="tag tfun">汗蒸幕</span></div></div>
     <div class="ti b"><div class="ttime">宵夜</div><div class="ec"><div class="et">炸雞 or 豬肉湯飯</div><span class="tag tf">宵夜</span></div></div>
   </div></div>
   <div class="dc" id="b-d3"><div class="tip" style="background:#E1F5EE;color:#0F6E56">☀ 彈性安排，重心是 Club D 水上樂園！</div><div class="tl">
     <div class="ti b"><div class="ttime">早上</div><div class="ec"><div class="et">附近吃早餐</div><span class="tag tf">早餐</span></div></div>
-    <div class="ti b"><div class="ttime">10:00–18:00</div><div class="ec"><div class="et">Club D 水上樂園</div><div class="em">玩足 8 小時！防水袋記得帶</div><span class="tag tfun">水上樂園</span></div></div>
-    <div class="ti b"><div class="ttime">傍晚</div><div class="ec"><div class="et">海雲台市場吃特色小吃</div><span class="tag tf">小吃</span></div></div>
-    <div class="ti b"><div class="ttime">晚上</div><div class="ec"><div class="et">海雲台沙灘吹風 + Olive Young</div><span class="tag tsh">購物</span></div></div>
+    <div class="ti b"><div class="ttime">10:00–18:00</div><div class="ec"><div class="et">Club D 水上樂園</div>
+<button class="nav-map-btn" onclick="nmap('클럽디오션',35.163,129.165)">📍 Naver 導航</button><div class="em">玩足 8 小時！防水袋記得帶</div><span class="tag tfun">水上樂園</span></div></div>
+    <div class="ti b"><div class="ttime">傍晚</div><div class="ec"><div class="et">海雲台市場吃特色小吃</div>
+<button class="nav-map-btn" onclick="nmap('해운대시장',35.1623,129.1638)">📍 Naver 導航</button><span class="tag tf">小吃</span></div></div>
+    <div class="ti b"><div class="ttime">晚上</div><div class="ec"><div class="et">海雲台沙灘吹風 + Olive Young</div>
+<button class="nav-map-btn" onclick="nmap('해운대해수욕장',35.1587,129.1604)">📍 Naver 導航</button><span class="tag tsh">購物</span></div></div>
   </div></div>
   <div class="dc" id="b-d4"><div class="tip" style="background:#EEEDFE;color:#534AB7">🌸 賞櫻日！晚上廣安無人機秀記得佔位！</div><div class="tl">
     <div class="ti b"><div class="ttime">早上</div><div class="ec"><div class="et">換飯店 / 整理行李</div><span class="tag tstay">住宿</span></div></div>
-    <div class="ti b"><div class="ttime">上午</div><div class="ec"><div class="et">迎月路</div><div class="em">海雲台沿海賞月兼賞櫻步道</div><span class="tag ts">賞櫻</span></div></div>
-    <div class="ti b"><div class="ttime">中午</div><div class="ec"><div class="et">溫泉川櫻花步道</div><div class="em">滿開時如粉色隧道</div><span class="tag ts">賞櫻</span></div></div>
-    <div class="ti b"><div class="ttime">下午</div><div class="ec"><div class="et">開琴路 + 南川洞</div><span class="tag ts">賞櫻</span></div></div>
-    <div class="ti b"><div class="ttime">夜晚</div><div class="ec"><div class="et">廣安里無人機秀</div><div class="em">提早 30 分鐘到海邊卡位！</div><span class="tag tfun">秀</span></div></div>
-    <div class="ti b"><div class="ttime">晚餐</div><div class="ec"><div class="et">83 烤肉</div><div class="em">排隊名店，早點去等位</div><span class="tag tf">晚餐</span></div></div>
-    <div class="ti b"><div class="ttime">餐後</div><div class="ec"><div class="et">樂天免稅店 / 新世界百貨</div><span class="tag tsh">購物</span></div></div>
+    <div class="ti b"><div class="ttime">上午</div><div class="ec"><div class="et">迎月路</div>
+<button class="nav-map-btn" onclick="nmap('달맞이길',35.159,129.184)">📍 Naver 導航</button><div class="em">海雲台沿海賞月兼賞櫻步道</div><span class="tag ts">賞櫻</span></div></div>
+    <div class="ti b"><div class="ttime">中午</div><div class="ec"><div class="et">溫泉川櫻花步道</div>
+<button class="nav-map-btn" onclick="nmap('온천천',35.1855,129.0812)">📍 Naver 導航</button><div class="em">滿開時如粉色隧道</div><span class="tag ts">賞櫻</span></div></div>
+    <div class="ti b"><div class="ttime">下午</div><div class="ec"><div class="et">開琴路 + 南川洞</div>
+<button class="nav-map-btn" onclick="nmap('개금로',35.1497,129.0023)">📍 Naver 導航</button><span class="tag ts">賞櫻</span></div></div>
+    <div class="ti b"><div class="ttime">夜晚</div><div class="ec"><div class="et">廣安里無人機秀</div>
+<button class="nav-map-btn" onclick="nmap('광안리해수욕장',35.1531,129.1186)">📍 Naver 導航</button><div class="em">提早 30 分鐘到海邊卡位！</div><span class="tag tfun">秀</span></div></div>
+    <div class="ti b"><div class="ttime">晚餐</div><div class="ec"><div class="et">83 烤肉</div>
+<button class="nav-map-btn" onclick="nmap('83 고기집 광안리',35.1534,129.119)">📍 Naver 導航</button><div class="em">排隊名店，早點去等位</div><span class="tag tf">晚餐</span></div></div>
+    <div class="ti b"><div class="ttime">餐後</div><div class="ec"><div class="et">樂天免稅店 / 新世界百貨</div>
+<button class="nav-map-btn" onclick="nmap('신세계백화점 센텀시티',35.1693,129.1317)">📍 Naver 導航</button><span class="tag tsh">購物</span></div></div>
   </div></div>
 </div>
 

@@ -843,6 +843,12 @@ function up(){
 sp('basic','s-pl2',document.querySelector('#s-pcat .pcbtn'),'s-pcat');
 sp('basic','b-pl2',document.querySelector('#b-pcat .pcbtn'),'b-pcat');
 initCL();
+
+// ── NAVER MAP ──
+function nmap(name, lat, lng) {
+  var url = 'https://map.naver.com/v5/search/' + encodeURIComponent(name) + '?c=' + lng + ',' + lat + ',16,0,0,0,dh';
+  window.open(url, '_blank');
+}
 </script>
 
 </body>
